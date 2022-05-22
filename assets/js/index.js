@@ -1,6 +1,6 @@
 
 const querys = (element) => document.querySelector(element)
-
+const query_id = (element) => document.getElementById(element)
 /****************** FUNÇÃO - CRIAR ITEM NA VITRINE *********************/
 
 const container_ul = querys(".container-ul")
@@ -183,7 +183,7 @@ addEventListener("keypress", event => {
 
 /*********************** FUNÇÃO - SWITCH LIGHT/DARK MODE  ************************/
 
-const link = querys("#dark-m")
+const link = query_id("dark_m")
 const btn_switch = querys("#switch")
 
 btn_switch.addEventListener("click", event =>{    
