@@ -183,7 +183,7 @@ addEventListener("keypress", event => {
 
 /*********************** FUNÇÃO - SWITCH LIGHT/DARK MODE  ************************/
 
-const link = querys("link")
+const link = querys("#dark-m")
 const btn_switch = querys("#switch")
 
 btn_switch.addEventListener("click", event =>{    
