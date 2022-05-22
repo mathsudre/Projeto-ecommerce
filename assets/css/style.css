@@ -496,7 +496,7 @@ aside h2 {
     left: 2px;   
     cursor: pointer;
     border: none;
-    background-image: url(./assets/img/botao-fechar.svg);
+    background-image: url(../img/botao-fechar.svg);
     background-size: contain;
     background-repeat: no-repeat;
     
