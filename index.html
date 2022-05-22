@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://kit.fontawesome.com/c65cc05c5d.js" crossorigin="anonymous"></script>
+    <script defer src="./assets/js/database.js"></script>   
+    <script defer src="./assets/js/index.js"></script>
+    <link   rel="stylesheet" href="./assets/css/style.css">
+    <title>WearTake</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="header-title">WearTake</h1>
+
+        <nav class="header-nav">           
+
+            <strong><button class="todos">Todos</button></strong>
+            <button class="acessórios">Acessórios</button>
+            <button class="calçados">Calçados</button>
+            <button class="camisetas">Camisetas</button>
+
+            <div class="toggle">
+                <input  class="light" id="switch" type="checkbox" name="theme">
+                <label  for="switch">Toggle</label>
+            </div>
+                      
+        </nav>
+
+    </header>
+
+
+    <div id="container-master"> <!---BEGINNER CONTAINER MASTER--->
+
+
+        <main id="container"><!---BEGINNER MAIN CONTAINER --->
+
+            <ul class="container-ul">
+
+              <!----  
+                <li class="hover-item">                   
+                    
+                    <img src="./img/jaqueta.svg" alt="">
+                                         
+
+                    <section class="section_description--vitrine">
+
+                        <h5>Camisetas</h5>
+                        <h2>Lightweight Jacket</h2>
+                        <p>
+                        Adicione um pouco de energia ao seu guarda-roupa
+                        de inverno com esta jaqueta vibrante...
+                        </p>
+                        <span>R$ 100.00</span>
+                        
+                        <button id="${element.id}" class="buying"> Adicionar <i class="fa-solid fa-cart-plus"></i></button>
+
+                    </section>
+
+                </li>
+                -->
+            
+            </ul>
+
+        </main><!---ENDING MAIN CONTAINER --->
+
+
+
+        <aside><!---BEGINNER ASIDE --->
+
+            <section class="search-bar">
+                <input id="input-search" type="text" placeholder="Digite aqui sua pesquisa">
+                <button class="searching">Pesquisar</button>
+            </section>
+
+                <h2>
+                    Carrinho de Compras
+                </h2>
+
+
+                <section class="cart-box"><!---BEGINNER CART BOX --->
+                    
+                    
+                    <div class="empty-cart" id="empty">
+                        <h3>Carrinho vazio</h3>
+                        <p>Adicione itens</p>
+                    </div>
+                    
+
+                    <ul id="cart-item-ul">
+
+                     <!----
+                        <li class="cart-item-li">
+
+                            <img src="./img/camiseta_preta.svg">
+
+                            <section class="cart-item-info">
+
+                                <h3>Lightweight Jacket</h3>
+                                <p>R$7,90</p>
+                                <h4>Quantidade: <button id="${index}" class="btn_minum">-</button><span>1</span> <button id="${index}" class="btn_plus">+</button> </h4>
+
+                            </section>
+                            <button id="${index}" class="remove btn-remove"></button>
+
+                        </li>       
+                        -->
+                       
+                    </ul>
+
+                </section><!---END CART BOX ---> 
+
+                    
+                    <div class="table-div">
+                    <!----
+                    <section class="table-purchase-info table-hidden" id="purchase-info">
+
+                        <p>Quantidade: <span id="quantify-cart">0</span></p>
+
+                        <p>Total: <span id="total-price-cart">R$0</span></p>
+
+                        <button>FINALIZAR COMPRA</button>
+                    </section>
+                    --->
+                    </div>
+                    
+
+        </aside><!---END ASIDE --->
+
+    </div> <!---END CONTAINER MASTER--->
+
+
+       
+
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+
+    --grey-100: #333333;
+    --grey-50:#828282;
+    --grey-0:#F5F5F5;
+
+    --title:#292929;
+    --sub-color-title: #242424;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;   
+    font-family: 'Inter', sans-serif;    
+}
+
+html{
+    background: rgb(153,140,162);
+    background: radial-gradient(circle, rgba(153,140,162,1) 0%, rgba(57,122,102,1) 50%, rgba(35,58,73,1) 100%);
+}
+
+body{
+    width: 100%; /**************/
+    height: 100%;
+    padding-bottom: 50px;    
+    
+}
+
+/*** ESTILO BARRA DE ROLAGEM CARRINHO ****/
+.cart-box::-webkit-scrollbar {
+    width: 12px;  
+}
+
+.cart-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+
+
+
+#container-master{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+}
+
+
+/**** HEADER ***/
+
+header{
+  /*  width: 1600px;*/
+    width: 100%;
+    height: 70px;     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    
+   
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(152, 154, 153, 0.3);
+    
+}
+
+.header-title{
+    width: 212px;
+    height: 24px;
+    font-size: 24px;
+    color: var(--grey-0);
+    margin-left: 118px; 
+}
+
+.header-nav{    
+    display: flex;
+    gap: 28px;
+    width: 500px;
+}
+
+.header-nav button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: var(--grey-0);    
+    width: 80px;
+    height: 25px;
+    border: none;    
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(152, 154, 153, 0.74);    
+}
+
+.header-nav button{
+    background: linear-gradient( to right,  #619292 0%, #5b9983 25%, transparent 50%);
+
+    background-size: 390% 100%;
+
+    background-position:right bottom;  
+
+    /*transition effect for background*/
+
+    transition: background .5s;
+
+}
+
+
+.header-nav button:hover {    
+    transition: .5s;
+    background-position:left bottom;
+}
+
+
+
+.header-nav strong button{    
+    color: var(--grey-0);
+    font-size: 16px;
+         
+}
+
+
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: var(--grey-50);
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 90px;
+    transition: 0.3s;
+}
+input:checked + label {
+    background-color: var(--grey-0);
+}
+
+input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+/*****MAIN CONTENT*****/
+
+#container{    
+    width: 990px;
+    height: 1000px;   
+    margin: 52px 57px 0px 115px;   
+    
+}
+
+
+.container-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 5px;
+}
+
+
+.container-ul li{    
+    width: 300px;
+    height: 468px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;   
+
+   
+    background-color: rgba(186, 199, 193, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 2px solid rgba(186, 199, 193, 0.3);
+}
+
+.container-ul li img{
+    width: 296px; 
+    
+}
+
+.section_description--vitrine{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 15px;    
+    width: 296px;
+    height: 245px;
+    
+
+    background-color: rgba(186, 199, 193, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 2px solid rgba(186, 199, 193, 0.3);        
+}
+
+
+
+.hover-item:hover {   
+    border: 2px solid var(--grey-100);
+    transition: 0.5s;
+   
+}
+
+
+.container-ul li section h5{
+    width: 70px;
+    height: 24px;   
+    font-size: 12px;
+    background-color: var(--grey-100);
+    color: #ffffff;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-ul li section h2{
+    width: 269px;
+    height: 24px;    
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--grey-100);
+}
+
+
+
+.container-ul li section p{
+    width: 269px;
+    height: 74px;
+    font-weight: 600;    
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-100);
+}
+
+
+
+.container-ul li section span{
+    width: 269px;
+    height: 16px;    
+    font-weight: 600;
+    font-size: 14px;    
+    color: var(--grey-100);
+}
+
+
+
+.container-ul li section button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;   
+    font-weight: 500;
+    font-size: 16px;   
+    color:var(--grey-100);
+    border-radius: 16px;  
+}
+
+.container-ul li section button{
+    background: linear-gradient( to right,  #373838 0%, #92a09b 25%, transparent 50%);
+
+    background-size: 390% 100%;
+    background-position:right bottom;
+    
+    /*transition effect for background*/
+
+    transition: background 1s;
+
+}
+
+
+.container-ul li section button:hover{    
+    transition: 1s;
+    background-position:left bottom;
+}
+
+/*****ASIDE BARRA DE PROCURA e CARRINHO DE COMPRAS****/
+
+aside{   
+    width: 347px;
+    height: 528px;
+    margin-top: 52px;
+
+}
+
+/*** BARRA DE PESQUISA ****/
+
+.search-bar{
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    width: 246px;
+    height: 50px;
+    background-color: rgba(35,58,73,1);
+    border: none;
+    font-size: 18px;
+    border-radius: 16px;
+}
+
+
+.search-bar input::placeholder{    
+    font-weight: 400;
+    font-size: 14px;    
+    padding-left: 16px;
+    color: var(--grey-0);   
+}
+
+.search-bar input:focus {  
+    outline: 0;
+}
+
+.search-bar button {
+    width: 96px;
+    height: 50px;    
+    font-weight: 500;
+    font-size: 16px;    
+    border: none;
+    background-color: rgba(35,58,73,1);
+    color: var(--grey-0);
+    border-radius: 16px;
+    
+}
+
+/*****CARRINHO*****/
+
+
+aside h2 {
+    width: 347px;
+    height: 50px;
+    background-color: rgba(35,58,73,1);   
+    font-weight: 700;
+    font-size: 18px;   
+    color: var(--grey-0);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+}
+
+
+.empty-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.empty-cart h3 {   
+    font-weight: 700;    
+    line-height: 24px;
+    color: var(--grey-100);
+}
+
+.empty-cart p {    
+    font-weight: 400;
+    font-size: 18px;    
+    color: var(--grey-50);
+}
+
+
+.remover{
+    display:none
+}
+
+
+/****ITEM DENTRO DO CARRINHO****/
+
+.cart-box{
+    background-color: var(--grey-0);
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: center;    
+    overflow-y: scroll;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;   
+       
+}
+
+
+.cart-item-ul{
+    display: flex;
+    width: 100%;
+    height: 240px;        
+}
+
+
+.cart-item-li{
+    display: flex;    
+    align-items: flex-start;
+    width: 100%;
+    height: 100px;  
+    margin-bottom: 20px;
+    margin-top: 10px;    
+        
+    background: rgb(153,170,170);
+    background: radial-gradient(circle, rgba(153,170,170,1) 0%, rgba(195,219,209,1) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 2px solid rgba(142, 146, 142, 0.3);
+}
+
+
+.cart-item-li img{
+    width: 88px;
+    height: 92px;
+    border-radius: 16px;
+}
+
+.cart-item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    gap: 21px;
+    width: 176px;
+    height: 92px;
+    margin-left: 15px;
+         
+}
+
+
+.cart-item-info h3{
+    width: 176px;
+    height: 100px;
+    color: var(--grey-100);    
+    font-weight: 700;
+    font-size: 16px;    
+}
+
+
+.cart-item-info p{
+    width: 70px;
+    height: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--grey-100);
+}
+
+.cart-item-info h4{
+    display: flex;   
+    align-items: center;
+    width: 100%;
+    height: 100%;    
+    font-size: 16px;
+}
+
+.btn-remove{
+    width: 22px;
+    height: 22px;    
+    border-radius: 50%;
+    position: relative;
+    top: -0px;
+    left: 2px;   
+    cursor: pointer;
+    border: none;
+    background-image: url(/assets/img/botao-fechar.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn_plus{
+    width: 30px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: #f3ebebc0;    
+}
+
+.btn_minum{
+    width: 30px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #f3ebebc0;    
+}
+
+/**** TABLE TOTAL PRICE ****/
+
+.table-div{
+    width: 345px;
+    height: 175px;    
+}
+
+
+.table-purchase-info {
+    width: 345px;
+    height: 126px;
+    background-color: rgba(35,58,73,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 16px;
+}
+
+
+.table-purchase-info p {    
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-0);
+    width: 306.78px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_div--btn{
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+
+    border: none;
+    color: var(--grey-100);
+
+    background-color: #1b1f18;
+    cursor: pointer;
+    color: var(--grey-0);
+    border-radius: 16px;
+}
+
+
+.table_div--btn {
+    background: linear-gradient( to right,  #373838 0%, rgba(35,58,73,1) 25%, transparent 50%);
+
+    background-size: 390% 100%;
+
+    background-position:right bottom;  
+
+    /*transition effect for background*/
+
+    transition: background 1s;
+
+}
+
+.table_div--btn:hover {    
+    transition: 1s;
+    background-position:left bottom;
+}
