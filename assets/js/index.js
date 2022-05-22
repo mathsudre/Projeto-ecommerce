@@ -17,7 +17,7 @@ return  container_ul.insertAdjacentHTML("beforeend",
                 <h2>${element.nameItem}</h2>
                 <p>${element.description}</p>
                 <span>R$ ${element.value}.00</span>
-                <button id="${element.id}" class="buying"> Adicionar <i class="fa-solid fa-cart-plus"></i></button>
+                <button id="${element.id}" class="buying"> Adicionar <i id="${element.id}" class="fa-solid fa-cart-plus"></i></button>
             </section>
 
  </li>`
@@ -55,9 +55,8 @@ const cart_box = querys("#empty")
 addEventListener("click",(event) => {       
         const get_class = event.target.className
         const get_id    = event.target.id        
-
-        if(get_class == "buying"){
-
+        
+        if(get_class == "buying" || get_class == "fa-solid fa-cart-plus"){
             const verification = repeated_product(carrinho,data,get_id)
 
             if(!verification){
