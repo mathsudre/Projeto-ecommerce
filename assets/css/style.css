@@ -28,7 +28,8 @@ html{
 }
 
 body{
-    width: 100%; /**************/
+    min-width: 1300px;
+    max-width: 1900px;    
     height: 100%;
     padding-bottom: 50px;
 }
@@ -171,7 +172,7 @@ label:active:after {
 /*****MAIN CONTENT*****/
 
 #container{    
-    width: 990px;
+    min-width: 990px;
     height: 100%;   
     margin: 52px 57px 0px 115px;   
     

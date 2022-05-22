@@ -61,7 +61,7 @@ addEventListener("click",(event) => {
             const verification = repeated_product(carrinho,data,get_id)
 
             if(!verification){
-            carrinho.push(data[get_id-1])
+            carrinho.unshift(data[get_id-1])
             cart_ul.innerHTML = ""
             carrinho.map(render_cart)
 
