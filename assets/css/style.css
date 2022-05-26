@@ -47,7 +47,7 @@ body{
 
 
 
-#container-master{
+#container-master{   
     width: 100%;
     height: 100%;    
     display: flex;    
@@ -61,8 +61,7 @@ header{
     height: 70px;   
     display: flex;
     justify-content: space-between;
-    align-items: center;  
-        
+    align-items: center;        
     background-color: rgba(183, 240, 213, 0.52);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.2px);
@@ -78,6 +77,52 @@ header{
     color: var(--title);
     margin-left: 118px;
 }
+
+/*** BARRA DE PESQUISA ****/
+
+.search-bar{
+    display: flex;
+    width: 385px;
+    height: 50px;
+}
+
+.search-bar input {
+    width: 330px;
+    height: 50px;
+    background-color: rgba(85, 205, 160, 0.27);
+    border: none;    
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+
+.search-bar input::placeholder{    
+    font-weight: 400;
+    font-size: 16px;    
+    padding-left: 16px;
+    color: var(--grey-100);
+      
+}
+
+.search-bar input:focus {  
+    outline: 0;
+} 
+
+
+.searching{    
+    width: 50px;
+    height: 50px;    
+    font-weight: 500;
+    font-size: 16px;   
+    border: none;    
+    color: var(--grey-100);    
+    background-color: rgba(85, 205, 160, 0.27);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;    
+        
+}
+
+/********/
 
 .header-nav{    
     display: flex;
@@ -316,50 +361,11 @@ label:active:after {
 aside{   
     width: 347px;
     height: 528px;
-    margin-top: 52px;
+    margin-top: 52px;    
 
 }
 
-/*** BARRA DE PESQUISA ****/
 
-.search-bar{
-    margin-bottom: 30px;
-}
-
-.search-bar input {
-    width: 246px;
-    height: 50px;
-    background-color: rgba(85, 205, 160, 0.27);
-    border: none;
-    font-size: 18px;
-    border-radius: 16px;
-}
-
-
-.search-bar input::placeholder{    
-    font-weight: 400;
-    font-size: 14px;    
-    padding-left: 16px;
-    color: var(--grey-100);
-      
-}
-
-.search-bar input:focus {  
-    outline: 0;
-} 
-
-
-.search-bar button {
-    width: 96px;
-    height: 50px;    
-    font-weight: 500;
-    font-size: 16px;   
-    border: none;
-    background-color: rgba(85, 205, 160, 0.27);
-    color: var(--grey-100);
-    border-radius: 16px;
-    
-}
 
 /*****CARRINHO*****/
 

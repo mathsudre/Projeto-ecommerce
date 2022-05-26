@@ -1,7 +1,7 @@
 
 const querys = (element) => document.querySelector(element)
 const query_id = (element) => document.getElementById(element)
-/****************** FUNÇÃO - CRIAR ITEM NA VITRINE *********************/
+
 
 const container_ul = querys(".container-ul")
 
@@ -25,7 +25,7 @@ return  container_ul.insertAdjacentHTML("beforeend",
 )}data.map(render_vitrine)
 
 
-/******************** FUNÇÃO - CRIAR ITEM NO CARRINHO **************************/
+
 
 
 const cart_ul = querys("#cart-item-ul")
@@ -46,7 +46,7 @@ return cart_ul.insertAdjacentHTML("beforeend",
 )}
 
 
-/**************** FUNÇÃO - ADICIONAR E REMOVER ITEM DO CARRINHO *********************/
+
 
 
 let carrinho = []
@@ -101,8 +101,6 @@ addEventListener("click",(event) => {
 
 
 
-/****** FUNÇÃO - VERIFICA SE O PRODUTO JÁ EXISTE NO CARRINHO ANTES DE ADICIONAR NO PROPRIO CARRINHO 
- ******/
 
 
 function repeated_product(product,new_product,id){
@@ -110,7 +108,7 @@ function repeated_product(product,new_product,id){
 }
 
 
-/****************** FUNÇÃO - RENDERIZAR TABELA DE QUANTIDADE E PREÇO ******************/
+
 
 const table_div  = querys(".table-div")
 
@@ -132,9 +130,7 @@ return  table_div.insertAdjacentHTML("beforeend",
 }
 
 
-/******************  FUNÇÕES BÔNUS  ******************/
- 
-/******************  FUNÇÃO - BOTÕES SECÇÕES/HEADER  ******************/
+
 
 addEventListener("click",(event) => {
     const alvo = event.target.className   
@@ -159,12 +155,13 @@ addEventListener("click",(event) => {
 })
 
 
-/******************  FUNÇÃO - BARRA DE PESQUISA  ******************/
 
-const input_search = querys("#input-search")
+
+const input_search = querys(".input-search")
 const searching = querys(".searching")
 
-addEventListener("keypress", event => {   
+addEventListener("keypress", event => {
+      
     const textInput =  new RegExp(input_search.value, "i")  
     const input_searching = data.filter(element => textInput.test(element.nameItem+element.tag))
 
@@ -180,7 +177,7 @@ addEventListener("keypress", event => {
 })
 
 
-/*********************** FUNÇÃO - SWITCH LIGHT/DARK MODE  ************************/
+
 
 const link = query_id("dark_m")
 const btn_switch = querys("#switch")

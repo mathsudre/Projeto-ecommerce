@@ -6,10 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://kit.fontawesome.com/c65cc05c5d.js" crossorigin="anonymous"></script>
-    <script defer src="./assets/js/database.js"></script>   
-    <script defer src="./assets/js/index.js"></script>
-    <link id="dark_m"  rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="https://kit.fontawesome.com/c65cc05c5d.js" crossorigin="anonymous"></script>    
+    <link   id="dark_m"  rel="stylesheet" href="./assets/css/style.css">    
     <link  rel="shortcut icon" type="image/x-icon" href="./assets/img/hairstyle.png">
     
     <title>ALL MEN</title>
@@ -21,6 +19,11 @@
     <header>
 
         <h1 class="header-title">ALL MEN</h1>
+
+        <section class="search-bar">
+            <input class="input-search" type="text" placeholder="Digite aqui sua pesquisa">
+            <button class="searching"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </section>
 
         <nav class="header-nav">           
 
@@ -75,17 +78,13 @@
 
 
 
-        <aside><!---BEGINNER ASIDE --->
-
-            <section class="search-bar">
-                <input id="input-search" type="text" placeholder="Digite aqui sua pesquisa">
-                <button class="searching">Pesquisar</button>
-            </section>
+        <aside><!---BEGINNER ASIDE --->           
+           
 
                 <h2>
                     Carrinho de Compras
                 </h2>
-
+                
 
                 <section class="cart-box"><!---BEGINNER CART BOX --->
                     
@@ -98,22 +97,8 @@
 
                     <ul id="cart-item-ul">
 
-                     <!----
-                        <li class="cart-item-li">
-
-                            <img src="./img/camiseta_preta.svg">
-
-                            <section class="cart-item-info">
-
-                                <h3>Lightweight Jacket</h3>
-                                <p>R$7,90</p>
-                                <h4>Quantidade: <button id="${index}" class="btn_minum">-</button><span>1</span> <button id="${index}" class="btn_plus">+</button> </h4>
-
-                            </section>
-                            <button id="${index}" class="remove btn-remove"></button>
-
-                        </li>       
-                        -->
+                     
+                        
                        
                     </ul>
 
@@ -121,16 +106,8 @@
 
                     
                     <div class="table-div">
-                    <!----
-                    <section class="table-purchase-info table-hidden" id="purchase-info">
+                   
 
-                        <p>Quantidade: <span id="quantify-cart">0</span></p>
-
-                        <p>Total: <span id="total-price-cart">R$0</span></p>
-
-                        <button>FINALIZAR COMPRA</button>
-                    </section>
-                    --->
                     </div>
                     
 
@@ -140,7 +117,8 @@
 
 
        
-
+    <script src="./assets/js/database.js"></script>   
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

@@ -79,6 +79,51 @@ header{
     margin-left: 118px; 
 }
 
+/*** BARRA DE PESQUISA ****/
+
+.search-bar{
+    display: flex;
+    width: 385px;
+    height: 50px;
+}
+
+.search-bar input {
+    width: 330px;
+    height: 50px;
+    background-color: rgba(35,58,73,1);
+    border: none;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;  
+    
+}
+
+
+.search-bar input::placeholder{    
+    font-weight: 400;
+    font-size: 16px;    
+    padding-left: 16px;
+    color: var(--grey-0);   
+}
+
+.search-bar input:focus {  
+    outline: 0;
+}
+
+.search-bar button {
+    width: 50px;
+    height: 50px;    
+    font-weight: 500;
+    font-size: 16px;    
+    border: none;
+    background-color: rgba(35,58,73,1);
+    color: var(--grey-0);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px; 
+    
+}
+
+/********/
+
 .header-nav{    
     display: flex;
     gap: 28px;
@@ -320,44 +365,7 @@ aside{
 
 }
 
-/*** BARRA DE PESQUISA ****/
 
-.search-bar{
-    margin-bottom: 30px;
-}
-
-.search-bar input {
-    width: 246px;
-    height: 50px;
-    background-color: rgba(35,58,73,1);
-    border: none;
-    font-size: 18px;
-    border-radius: 16px;
-}
-
-
-.search-bar input::placeholder{    
-    font-weight: 400;
-    font-size: 14px;    
-    padding-left: 16px;
-    color: var(--grey-0);   
-}
-
-.search-bar input:focus {  
-    outline: 0;
-}
-
-.search-bar button {
-    width: 96px;
-    height: 50px;    
-    font-weight: 500;
-    font-size: 16px;    
-    border: none;
-    background-color: rgba(35,58,73,1);
-    color: var(--grey-0);
-    border-radius: 16px;
-    
-}
 
 /*****CARRINHO*****/
 
