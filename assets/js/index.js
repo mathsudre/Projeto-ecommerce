@@ -19,7 +19,7 @@ addEventListener("click",(event) => {
             if(!verification){
             carrinho.unshift(data[get_id-1])
             cart_ul.innerHTML = ""
-            carrinho.map(render_cart)
+            render_cart(carrinho)
 
             }                       
                            
@@ -28,19 +28,19 @@ addEventListener("click",(event) => {
         if(get_class == "remove btn-remove"){                  
             carrinho.splice(get_id,1)
             cart_ul.innerHTML = ""
-            carrinho.map(render_cart)                   
+            render_cart(carrinho)                   
         }
 
         if(get_class == "btn_plus"){          
             carrinho[get_id].amount += 1
             cart_ul.innerHTML = ""
-            carrinho.map(render_cart)
+            render_cart(carrinho)
         } 
 
         if(get_class == "btn_minum" && carrinho[get_id].amount > 0){
             carrinho[get_id].amount -= 1           
             cart_ul.innerHTML = ""
-            carrinho.map(render_cart)
+            render_cart(carrinho)
                     
         }
 
@@ -92,17 +92,22 @@ addEventListener("click",(event) => {
 
     if(alvo == "camisetas"){ 
         container_ul.innerHTML = ""
-        new_data.map(render_vitrine)
-    }if(alvo == "acessórios"){
-        container_ul.innerHTML = ""
-        new_data.map(render_vitrine)
-    }if(alvo == "calçados"){
-        container_ul.innerHTML = ""
-        new_data.map(render_vitrine)
+        render_vitrine(new_data)
     }
+
+    if(alvo == "acessórios"){
+        container_ul.innerHTML = ""
+        render_vitrine(new_data)
+    }
+
+    if(alvo == "calçados"){
+        container_ul.innerHTML = ""
+        render_vitrine(new_data)
+    }
+    
     if(alvo == "todos"){
         container_ul.innerHTML = ""
-        data.map(render_vitrine)
+        render_vitrine(data)
     }
    
 })
@@ -111,7 +116,7 @@ addEventListener("click",(event) => {
 
 
 const input_search = querys(".input-search")
-const searching = querys(".searching")
+//const searching = querys(".searching")
 
 addEventListener("keypress", event => {
       
@@ -119,12 +124,13 @@ addEventListener("keypress", event => {
     const input_searching = data.filter(element => textInput.test(element.nameItem+element.tag))
 
     if(input_searching.length > 0){
-    container_ul.innerHTML = ""        
-    input_searching.map(render_vitrine)      
+        container_ul.innerHTML = ""        
+        render_vitrine(input_searching)      
     }
+
     if(event.key == "Enter"){
         container_ul.innerHTML = ""        
-        data.map(render_vitrine)
+        render_vitrine(data)
     }   
    
 })

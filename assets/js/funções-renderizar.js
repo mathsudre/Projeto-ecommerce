@@ -9,9 +9,10 @@ const querys = (element) => document.querySelector(element)
 
 const container_ul = querys(".container-ul")
 
-function render_vitrine (element){
+function render_vitrine (produto){
 
-return  container_ul.insertAdjacentHTML("beforeend",
+produto.forEach(element => {
+container_ul.insertAdjacentHTML("beforeend",
 `<li class="hover-item">
 
         <img src=${element.img} alt=${element.nameItem}>
@@ -24,15 +25,16 @@ return  container_ul.insertAdjacentHTML("beforeend",
                 <button id="${element.id}" class="buying"> Adicionar <i id="${element.id}" class="fa-solid fa-cart-plus"></i></button>
             </section>
 
- </li>`
-)}data.map(render_vitrine)
+ </li>` )})
+}render_vitrine(data)
 
 
 const cart_ul = querys("#cart-item-ul")
 
-function render_cart(element,index){     
+function render_cart(produto){     
 
-return cart_ul.insertAdjacentHTML("beforeend",
+produto.forEach((element, index) => {
+cart_ul.insertAdjacentHTML("beforeend",
 
 `<li class="cart-item-li">
         <img src=${element.img}>
@@ -43,7 +45,8 @@ return cart_ul.insertAdjacentHTML("beforeend",
         </section>
         <button id="${index}" class="remove btn-remove"></button>
 </li>`
-)}
+)
+ })}
 
 
 
