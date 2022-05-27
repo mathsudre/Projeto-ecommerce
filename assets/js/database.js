@@ -1,5 +1,7 @@
 // Banco de dados dos produtos
 
+export { data }
+
 let data = [
   {
     id:1,
@@ -101,3 +103,4 @@ let data = [
     amount: 1 
   }
 ]
+
